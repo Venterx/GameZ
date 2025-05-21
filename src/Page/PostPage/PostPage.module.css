@@ -1,0 +1,144 @@
+.contacts {
+    padding: 60px 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #9146ff;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info__block {
+    margin-bottom: 40px;
+}
+
+.info__block h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #9146ff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.info__block h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #9146ff;
+}
+
+.info__block p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.form__container {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form__container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group label {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.form__group input,
+.form__group textarea {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+    outline: none;
+    border-color: #9146ff;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.success {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.success p {
+    font-size: 1.1rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+} 

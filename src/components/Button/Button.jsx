@@ -1,5 +1,6 @@
-import styles from "./BlueButton.module.css"
-export default function BlueButton({ value, type, text }) {
+import styles from "./Button.module.css"
+
+export default function Button({ value, type, onClick }) {
 	let btn = ""
 
 	switch (type) {
@@ -24,9 +25,22 @@ export default function BlueButton({ value, type, text }) {
 		case "btnGrayBig":
 			btn = styles.btnGrayBig
 			break
+		case "btnPurple":
+			btn = styles.btnPurple
+			break
+		case "btnDark":
+			btn = styles.btnDark
+			break
+		case "btnGreen":
+			btn = styles.btnGreen
+			break
 		default:
-			btn = ""
+			btn = styles.btnDark
 	}
 
-	return <button className={btn}>{value}{text}</button>
+	return (
+		<button className={btn} onClick={onClick}>
+			{value}
+		</button>
+	)
 }

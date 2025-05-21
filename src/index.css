@@ -6,14 +6,39 @@
 }
 
 body {
-	background-color: #f5f5f5;
+	background-color: #1a1a1a;
+	color: #e0e0e0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
 	text-decoration: none;
-	color: black;
+	color: #e0e0e0;
+	transition: color 0.3s ease;
 }
 
-.nav__item.active{
-	color: #0009ea;
+a:hover {
+	color: #9146ff; /* Twitch purple, good for gaming theme */
+}
+
+.nav__item.active {
+	color: #01C0DA;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #2a2a2a; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #444; 
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
 }

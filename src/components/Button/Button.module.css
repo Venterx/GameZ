@@ -1,0 +1,157 @@
+.btnBlue {
+	background-color: #4a76fd;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 10px 25px;
+	transition: background-color 0.3s ease;
+	font-size: 1.1rem;
+}
+
+.btnBlue:hover {
+	background-color: #3a66ed;
+}
+
+.btnBlack {
+	background-color: #333;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 10px 25px;
+	transition: background-color 0.3s ease;
+}
+
+.btnBlack:hover {
+	background-color: #555;
+}
+
+.btnGray {
+	background-color: #333;
+	color: #e0e0e0;
+	border: 1px solid #444;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 10px 25px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btnGray:hover {
+	background-color: #444;
+}
+
+.btnWhite {
+	background-color: #2a2a2a;
+	color: #9146ff;
+	border: 1px solid #9146ff;
+	font-size: 16px;
+	padding: 8px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.btnWhite:hover {
+	background-color: #9146ff;
+	color: white;
+}
+
+.btnBlueSmall {
+	background-color: #4a76fd;
+	color: white;
+	border: none;
+	font-size: 14px;
+	padding: 6px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btnBlueSmall:hover {
+	background-color: #3a66ed;
+}
+
+.btnBlueBig {
+	background-color: #4a76fd;
+	color: white;
+	border: none;
+	font-size: 18px;
+	padding: 14px 40px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btnBlueBig:hover {
+	background-color: #3a66ed;
+}
+
+.btnGrayBig {
+	background-color: #333;
+	color: #e0e0e0;
+	border: 1px solid #444;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 12px 35px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btnGrayBig:hover {
+	background-color: #444;
+}
+
+.btnPurple {
+	background-color: #F51973;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 10px 25px;
+	transition: background-color 0.3s ease;
+	font-size: 1.1rem;
+	height: 40px;
+}
+
+.btnPurple:hover {
+	background-color: #ff0022;
+}
+
+.btnDark {
+	background-color: #2a2a2a;
+	color: #e0e0e0;
+	border: 1px solid #444;
+	font-size: 16px;
+	padding: 8px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.btnDark:hover {
+	background-color: #444;
+	color: white;
+}
+
+.btnGreen {
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 10px 25px;
+	transition: background-color 0.3s ease;
+	font-size: 1.1rem;
+}
+
+.btnGreen:hover {
+	background-color: #3d8b40;
+} 

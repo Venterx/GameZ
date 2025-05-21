@@ -1,24 +1,103 @@
-import BlueButton from "../../../components/BlueButton/BlueButton"
+import Button from "../../../components/Button/Button"
 import styles from "./Card.module.css"
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom"
+import { products } from "../../../products"
 
-export default function Item(props) {
+export default function Card({
+	id,
+	name,
+	price,
+	imagePath,
+	isCard,
+	addToCart,
+}) {
+	function GameInfo() {
+		// find возвращает объект из массива, который соответствует условию
+		const product = products.find((game) => game.id == id)
+
+		if (!product)
+			return {
+				description: "Нет описания",
+				developer: "Неизвестный разработчик",
+				releaseDate: "Нет данных",
+				tags: [],
+			}
+
+		// Ограничиваем описание до 220 символов и добавляем многоточие
+		const shortDescription =
+			product.description.length > 220
+				? product.description.substring(0, 220) + "..."
+				: product.description
+
+		return {
+			description: shortDescription,
+			developer: product.developer,
+			releaseDate: product.releaseDate,
+			tags: product.tags || [],
+		}
+	}
+
+	const gameInfo = GameInfo()
+
 	return (
-		<>
-			<div className={styles.catalog}>
-				<div>
-					<img src={props.imagePath} alt="#" />
+		<Link to={`/catalog/${id}`} className={styles.gameCardLink}>
+			<div className={styles.gameCard}>
+				<div className={styles.gameImage}>
+					<img src={imagePath} alt={name} />
 				</div>
-                <div className={styles.content}>
-                    <p className={styles.text}>{props.name}</p>
-                    <div className={styles.footer}>
-                        <h3 className={styles.price}>{props.price}₽</h3>
-						<Link to={`/catalog/${props.id}`}>
-                			<BlueButton text={"Подробнее"} type="btnBlueBig"/>
-            			</Link>
-                    </div>
-                </div>
+				<div className={styles.gameContent}>
+					<h3 className={styles.gameTitle}>{name}</h3>
+					<div className={styles.gameDetails}>
+						<div className={styles.gameInfo}>
+							<p className={styles.gameDeveloper}>
+								Разработчик: {gameInfo.developer}
+							</p>
+							<p className={styles.gameReleaseDate}>
+								Дата выхода: {gameInfo.releaseDate}
+							</p>
+						</div>
+						<div className={styles.gameTags}>
+							{gameInfo.tags.map((tag, index) => (
+								<span key={index} className={styles.tag}>
+									{tag}
+								</span>
+							))}
+						</div>
+						<div className={styles.gameDescription}>
+							{gameInfo.description}
+						</div>
+					</div>
+					<div className={styles.gameFooter}>
+						<div className={styles.priceBlock}>
+							<h3 className={styles.price}>{price}₽</h3>
+						</div>
+						<div className={styles.buttons}>
+							{isCard && (
+								<button
+									onClick={(e) => {
+										e.preventDefault()
+										addToCart()
+									}}
+									
+									className={styles.cartButton}
+									title="Добавить в корзину"
+								>
+									<img src="src/assets/common/cart.png" alt="cart" />
+								</button>
+							)}
+
+							<span
+								className={styles.detailsLink}
+								onClick={(e) => e.preventDefault()}
+							>
+								<Link to={`/catalog/${id}`} className={styles.gameCardLink}>
+									<Button value={"Подробнее"} type="btnPurple" />
+								</Link>
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</>
+		</Link>
 	)
 }

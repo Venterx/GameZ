@@ -1,39 +1,96 @@
 .catalog {
-    background-color: #f5f5f5;
+    padding: 40px 20px;
     margin: 0 auto;
-	max-width: 1300px;
-	width: 100%;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #1a1a1a;
 }
 
 .catalog__title {
-    margin-top: 40px;
-    font-family: Ubuntu;
-    font-size: 40px;
-    font-weight: 500;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #e0e0e0;
+    text-align: center;
+    position: relative;
+}
+
+.catalog__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #9146ff;
 }
 
 .catalog__line {
-    margin-top: 40px;
+    margin: 30px 0;
     display: flex;
     align-items: center;
     gap: 20px;
-    font-family: Ubuntu;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
+    color: #e0e0e0;
 }
 
 .wrap {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
-    gap: 20px;
-    width: 1300px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    justify-items: center;
 }
 
 .catalog__footer {
     display: flex;
-    justify-content: flex-end;
-    margin: 80px 0 80px 0;
+    justify-content: center;
+    margin: 60px 0 20px 0;
 }
-.category{
+
+.category {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.selectSort {
+    padding: 10px;
+    border: 1px solid #9146ff;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+}
+
+.notFound {
+    color: #e0e0e0;
+    font-size: 18px;
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .catalog__line {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
