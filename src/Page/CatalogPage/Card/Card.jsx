@@ -2,6 +2,16 @@ import Button from "../../../components/Button/Button"
 import styles from "./Card.module.css"
 import { Link } from "react-router-dom"
 import { products } from "../../../products"
+import cart from "../../../assets/common/cart.png"
+import item1 from "../../../assets/Products/Item1.jpg"
+import item2 from "../../../assets/Products/Item2.jpg"
+import item3 from "../../../assets/Products/Item3.jpg"
+import item4 from "../../../assets/Products/Item4.jpg"
+import item5 from "../../../assets/Products/Item5.jpg"
+import item6 from "../../../assets/Products/Item6.jpg"
+import item7 from "../../../assets/Products/Item7.jpg"
+import item8 from "../../../assets/Products/Item8.jpg"
+import item9 from "../../../assets/Products/Item9.jpg"
 
 export default function Card({
 	id,
@@ -82,7 +92,7 @@ export default function Card({
 									className={styles.cartButton}
 									title="Добавить в корзину"
 								>
-									<img src="src/assets/common/cart.png" alt="cart" />
+									<img src={cart} alt="cart" />
 								</button>
 							)}
 
